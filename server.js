@@ -22,6 +22,7 @@ server.listen(5000,()=>console.log("connected"));
 var users = {};
 io.on('connection',(socket)=>{
    socket.on('new user',()=>{
+       console.log("new user");
        users[socket.id]={
            xPoints : [],
            yPoints : [] ,
