@@ -97,7 +97,7 @@ function draw() {
                 context.rect(user.xPoints[0], user.yPoints[0], user.xPoints[user.xPoints.length - 1], user.yPoints[user.yPoints.length - 1]);
                 context.fill();
             }else{
-                context.clearRect(0, 0, 500, 500);
+                //context.clearRect(0, 0, 500, 500);
                 context.beginPath();
                 context.arc(user.xPoints[user.xPoints.length-1],user.yPoints[user.yPoints.length-1],50,0,2*3.14);
                 context.fill();
@@ -124,6 +124,17 @@ function draw() {
     })
 
     $("#line").click((e) => {
+        movement.mode = 1;
+        movement.xPoints = [];
+        movement.yPoints = [];
+        movement.dragging = [];
+        movement.paint = false;
+    });
+
+    $("#clear").click((e) => {
+        var canvas = document.getElementById('canvas');
+        context = canvas.getContext("2d");
+        context.clearRect(0, 0, 500, 500);
         movement.mode = 1;
         movement.xPoints = [];
         movement.yPoints = [];
