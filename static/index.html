@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+  src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+    <style type="text/css">
+        #canvas{
+            border:1px solid black;
+        }
+    </style>  
+
+</head>
+
+<body onload="draw()">
+    <canvas id="canvas" height="500" width="500"></canvas>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/static/game.js"></script>
+</body>
+</html>
