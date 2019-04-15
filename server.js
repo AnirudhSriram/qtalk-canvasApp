@@ -26,7 +26,8 @@ io.on('connection',(socket)=>{
            xPoints : [],
            yPoints : [] ,
            dragging:[],
-           paint:false
+           paint:false,
+           mode:1
        };
    });
    socket.on('movement',(data)=>{
@@ -35,6 +36,7 @@ io.on('connection',(socket)=>{
        user.yPoints = data.yPoints;
        user.dragging = data.dragging;
        user.paint = data.paint;
+       user.mode = data.mode;
    });
 })
 setInterval(()=>{io.sockets.emit('data',users)},1000/60);
