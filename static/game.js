@@ -39,6 +39,10 @@ function draw() {
        socket.on('data',(users)=>{
         var canvas = document.getElementById('canvas');
         context = canvas.getContext("2d");
+        context.clearRect(0, 0, 500, 500);
+        context.strokeStyle = "blue";
+            context.lineJoin = "round";
+            context.lineWidth = 5;
         for(var person in users){
             var user = users[person] ;
             for (var i = 0; i < user.xPoints.length; i++) {
@@ -55,16 +59,6 @@ function draw() {
         }
 
        })
-    function redraw() {
-        
-        context.clearRect(0, 0, 500, 500);
-        context.strokeStyle = "#df4b26";
-            context.lineJoin = "round";
-            context.lineWidth = 5;
-
-        
-        
-    }
 
 
 
