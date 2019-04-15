@@ -5,4 +5,6 @@ clone repo
 
 npm install --save express socket.io
 
-go into folder and execute : node server.js
+npm install --save nodemon
+
+go into folder and execute : nodemon server.js
